@@ -1,32 +1,3 @@
-// const express = require('express');
-// const app = express();
-// const port = 3001; // Usamos un puerto diferente
-
-// app.use(express.json());
-
-// let users = [
-//     { id: 5, nombre: "luis" },
-//     { id: 6, nombre: "gabriela" }
-// ];
-
-// app.get('/users', (req, res) => {
-//     console.log('GET /users request received');
-//     res.json(users);
-// });
-
-// app.post('/users', (req, res) => {
-//     const newUser = req.body;
-//     users.push(newUser);
-//     console.log('POST /users request received. New user:', newUser);
-//     res.status(201).json(newUser);
-// });
-
-// app.listen(port, () => {
-//     console.log(`Users Service listening at http://localhost:${port}`);
-// });
-
-//Actividad propuesta:
-//El users-service utilizaría el ORM Sequelize para conectarse a MySQL.
 
 const express = require('express')
 require('dotenv').config()

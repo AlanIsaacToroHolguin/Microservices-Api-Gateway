@@ -11,5 +11,5 @@ const sequelize = new Sequelize(
     logging: false, // Opcional: puedes ponerlo en `true` para ver las consultas SQL en la consola
   }
 );
-
-module.exports = sequelize;
+  
+module.exports = sequelize; 

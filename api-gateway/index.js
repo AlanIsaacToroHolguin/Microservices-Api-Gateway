@@ -1,8 +1,15 @@
 const express = require('express');
 const proxy = require('express-http-proxy');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
+
+// AGREGAR CORS
+app.use(cors({
+  origin: 'http://localhost:5173', // Puerto de Vite (React)
+  credentials: true
+}));
 
 const usersServiceUrl = 'http://localhost:3001';
 const productsServiceUrl = 'http://localhost:3002';

@@ -1,5 +1,6 @@
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
 require('dotenv').config();
 
 const sequelize = require('./config/database');
@@ -7,6 +8,10 @@ const userRoutes = require('./routes/userRoutes');
 
 const app = express();
 const port = 3001;
+
+// AGREGAR CORS
+app.use(cors());
+app.use(express.json());
 
 app.use(express.json());
 const PRODUCTS_SERVICE_URL = 'http://localhost:3002';
